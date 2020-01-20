@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: d0b3b53d7cd43264094d8b37d2bb8ed5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Dream Orphans
+  fontNames:
+  - Dream Orphans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5f0a6c827fc9b334ca8358de4ea084e5, type: 3}
+  - {fileID: 12800000, guid: ce6f7d86a3290cf4597a3bc1db15f249, type: 3}
+  - {fileID: 12800000, guid: 5da6a6edf8eda334d80f4d2dca9c5418, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

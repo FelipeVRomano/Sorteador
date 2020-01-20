@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d8ef1ca8bd9d8e14890d5a40df3af474
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Day Roman
+  fontNames:
+  - Day Roman
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 408b98a4fa3d4a34caf44679160b4b16, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
