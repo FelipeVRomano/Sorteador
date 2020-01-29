@@ -11,6 +11,7 @@ public class numeros : MonoBehaviour
     int valMax;
     int qtdNum;
     bool repete;
+    [SerializeField]
     private List<int> nums;
     private GameObject menu;
     private Menu botao1;
@@ -45,7 +46,7 @@ public class numeros : MonoBehaviour
     public void numMin()
     {
         textMin = minTxt.text;
-        valMin = Convert.ToInt32(textMin);
+        valMin = Convert.ToInt32(textMin) - 1;
     }
     public void numMax()
     {
@@ -76,6 +77,11 @@ public class numeros : MonoBehaviour
             repete = true;
         }
     }
+    private void FixedUpdate()
+    {
+        int x = UnityEngine.Random.Range(0, 3);
+        print(x);
+    }
     public void sorteio()
     {
         if (qtdNum > 0 && valMax > valMin)
@@ -84,7 +90,7 @@ public class numeros : MonoBehaviour
             {
                 for (int i = 0; i < qtdNum; i++)
                 {
-                    int x = UnityEngine.Random.Range(valMin, valMax);
+                    int x = UnityEngine.Random.Range(valMin + 1, valMax + 1);
                     resultados.text += "\n" + x;
 
                 }
@@ -93,15 +99,18 @@ public class numeros : MonoBehaviour
             else
             {
                 
-                for (int i = valMin; i <= valMax ; i++)
+                for (int i = valMin; i <= valMax+1 ; i++)
                 {
                     nums.Add(i);
                 }
                 for(int i = 0; i< qtdNum; i++)
                 {
-                    int x = UnityEngine.Random.Range(0, nums.Count);
-                    resultados.text += "\n" + x;
-                    nums.Remove(x);
+                    int x = UnityEngine.Random.Range(valMin + 1, nums.Count - 1);
+                    print(x);
+                    resultados.text += "\n" + nums[x];
+                    print(nums[x]);
+                    if(qtdNum > 1) nums.Remove(nums[x]);
+                   
                 }
                 botao1.changeBotao1();
             }
@@ -117,17 +126,7 @@ public class numeros : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
 
-        Texture2D ss = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
-        ss.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-        ss.Apply();
-
-        string filePath = Path.Combine(Application.temporaryCachePath, "shared img.png");
-        File.WriteAllBytes(filePath, ss.EncodeToPNG());
-
-        // To avoid memory leaks
-        Destroy(ss);
-
-        new NativeShare().AddFile(filePath).SetSubject("Sorteador").SetText(resultados.text).Share();
+        new NativeShare().SetSubject("Resultado do Sorteio").SetText("O meu resultado do sorteio foi:" + resultados.text).Share();
 
         // Share on WhatsApp only, if installed (Android only)
         //if( NativeShare.TargetExists( "com.whatsapp" ) )
