@@ -1,8 +1,8 @@
 # SorteioGIT
-Aplicativo Sorteador \n
-Pequeno projeto mobile feito na Unity. O projeto tem as funções de:\n
--Simulação de um dado. \n
--Sorteio de equipes. \n
--Sorteio de números. \n
--Sorteio de nomes. \n
--Ad's e compartilhar o resultado. \n
+Aplicativo Sorteador <br />
+Pequeno projeto mobile feito na Unity. O projeto tem as funções de: <br />
+-Simulação de um dado. <br />
+-Sorteio de equipes. <br />
+-Sorteio de números. <br />
+-Sorteio de nomes. <br />
+-Ad's e compartilhar o resultado. <br />
